@@ -30,7 +30,7 @@ Built with Python, it provides a smooth, GUI-driven experience for voters and ad
 ```
 Project EazyVote v2.1.1 for St George School/
 │
-├── stgeorge.py.py          # Main voting application (voter-facing ballot UI)
+├── stgeorge.py             # Main voting application (voter-facing ballot UI)
 ├── result.py               # Results viewer (admin-facing results & CSV export)
 ├── sqltable.py             # Database initializer (creates tables and seeds candidate data)
 ├── reset.py                # Utility to reset all vote counts to zero
@@ -133,7 +133,7 @@ pip install mysql-connector-python Pillow
 ```
 
 > **MySQL Credentials (default):** `user=root`, `password=1234`, `host=localhost`
-> You can change these in `stgeorge.py.py`, `result.py`, `sqltable.py`, and `reset.py` if needed.
+> You can change these in `stgeorge.py`, `result.py`, `sqltable.py`, and `reset.py` if needed.
 
 ---
 
@@ -152,7 +152,7 @@ python sqltable.py
 Launch the voter-facing ballot interface:
 
 ```bash
-python stgeorge.py.py
+python stgeorge.py
 ```
 
 - The splash screen appears; click **Continue** to start voting.
