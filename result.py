@@ -3,7 +3,7 @@ import tkinter
 import mysql.connector
 from PIL import Image, ImageTk
 import tkinter.font as TkFont
-import csv,pickle
+import csv
 
 cnx=mysql.connector.connect(user="root", password = "1234", host = "localhost", database = "george")
 cursor = cnx.cursor()
@@ -38,27 +38,10 @@ with open('results.csv', 'w', newline='') as file:
     for j in range(0,6):
         writer.writerow([serialnolist[j], namelist[j], classlist[j], voteslist[j]]) 
 
-#----------TO ADD RECORDS INITIALLY TO A LIST-----------#
-def add_records(event):
-    easterwindow= Tk()
-    easterwindow.configure(bg='black')
-    easterwindow.geometry('500x300')
-    easterwindow.title("Got you!!")
-    f=open('data.dat','rb')
-    datas = pickle.load(f)
-    lbl = Label(easterwindow,text=datas,bg='black',fg='white',font=("IBM Plex Mono", 10))
-    lbl.place(x=50, y=140)
-    lbl1 = Label(easterwindow,text="MOONCHIYA KAAZHCHAKAL",bg='black',foreground='green',font=("IBM Plex Mono Medium", 16))
-    lbl1.place(x=110, y=70)
-    lbl2 = Label(easterwindow,text="By A.R. Lestlinashan and Leonardo de Martine",bg='black',fg='grey',font=("IBM Plex Mono Medium", 11))
-    lbl2.place(x=50, y=100)
-    easterwindow.mainloop()
-
 root= Tk()
 root.configure(bg="#121e2a")    # Setting the background of the window
 root.geometry("1366x768")    # Setting the size of the window
 root.title("Election Results")    # Setting the title of the window
-root.bind_all('<Control-Alt-D>', add_records)  #Easter egg
 font1 = TkFont.Font(family="Google Sans",size =18)    # Setting the font
 font2 = TkFont.Font(family="Google Sans", size=16)
 font3 = TkFont.Font(family="Google Sans", size=17, weight="normal")

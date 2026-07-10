@@ -52,7 +52,6 @@ Project EazyVote v2.1.1 for St George School/
 ├── resstrtscrn.jpg         # Results app splash screen background
 ├── table.jpg               # Results table background image
 │
-├── data.dat                # Easter egg data (serialized with pickle)
 ├── results.csv             # Auto-generated CSV results report
 │
 ├── Fonts/                  # Custom font files (Google Sans, IBM Plex Mono)
@@ -94,7 +93,6 @@ Project EazyVote v2.1.1 for St George School/
 | GUI Framework | Tkinter (with ttk)                             |
 | Image Handling| Pillow (PIL)                                   |
 | Database      | MySQL (via `mysql-connector-python`)           |
-| Data Serialization | `pickle` (Easter egg)                   |
 | Reporting     | `csv` module (built-in)                        |
 | Build/Deploy  | PyInstaller (`.spec` files + standalone `.exe`)|
 | Fonts         | Google Sans, IBM Plex Mono                     |

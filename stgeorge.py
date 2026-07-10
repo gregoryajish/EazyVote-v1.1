@@ -4,31 +4,11 @@ from tkinter import ttk
 import tkinter.font as TkFont
 from PIL import Image, ImageTk
 import mysql.connector
-import pickle
-
-#----------TO ADD RECORDS INITIALLY TO A LIST-----------#
-def add_records(event):
-    easterwindow= Tk()
-    easterwindow.configure(bg='black')
-    easterwindow.geometry('500x300')
-    easterwindow.title("Got you!!")
-    f=open('data.dat','rb')
-    datas = pickle.load(f)
-    lbl = Label(easterwindow,text=datas,bg='black',fg='white',font=("IBM Plex Mono", 10))
-    lbl.place(x=50, y=140)
-    lbl1 = Label(easterwindow,text="MOONCHIYA KAAZHCHAKAL",bg='black',foreground='green',font=("IBM Plex Mono Medium", 16))
-    lbl1.place(x=110, y=70)
-    lbl2 = Label(easterwindow,text="By A.R. Lestlinashan and Leonardo de Martine",bg='black',fg='grey',font=("IBM Plex Mono Medium", 11))
-    lbl2.place(x=50, y=100)
-    easterwindow.mainloop()
-
-
 x=0
 top = Tk()
 top.configure(bg="#121e2a")    # Setting the background of the window
 top.geometry("1366x768")    # Setting the size of the window
 top.title("Voting")
-top.bind_all('<Control-Alt-D>', add_records)  #Easter egg
 font5 = TkFont.Font(family="Google Sans", size=10, weight="normal")
 font6 = TkFont.Font(family="Google Sans", size=15, weight="bold")
 continimg = (Image.open("continuebtn.jpg"))
@@ -147,7 +127,6 @@ root = Tk()    # Creating a main window
 root.configure(bg="#121e2a")    # Setting the background of the window
 root.geometry("1366x768")    # Setting the size of the window
 root.title("Voting")    # Setting the title of the window
-root.bind_all('<Control-Alt-D>', add_records)  #Easter egg
 
 font1 = TkFont.Font(family="Google Sans",size =14)    # Setting the font
 font2 = TkFont.Font(family="Google Sans", size=25, weight="bold")
