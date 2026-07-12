@@ -57,8 +57,6 @@ Project EazyVote v2.1.1 for St George School/
 ├── Fonts/                  # Custom font files (Google Sans, IBM Plex Mono)
 ├── Legal/                  # Legal/copyright documents
 ├── Deployement/            # PyInstaller distributable builds
-├── build/                  # PyInstaller build artifacts
-├── dist/                   # Compiled standalone executables (.exe)
 │
 ├── stgeorge.py.spec        # PyInstaller spec for main voting app
 ├── result.spec             # PyInstaller spec for results viewer
